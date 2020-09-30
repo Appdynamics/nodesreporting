@@ -19,6 +19,14 @@ $controller = "https://customer.saas.appdynamics.com"
 
 $auth = Get-AuthorizationHeader -pair "user@customer1:password"
 
+#Analytics
+$apiKey = "api-key-from-appdy-analytics"
+
+$accountName = "global_account-name-123456"
+
+#Custom Schema Name
+$index = "customer_name_dr_license_v1"
+
 $appdy = [Appdynamics]::new($controller,$auth)
 
 # Time Range for Status as Reporting in minutes
@@ -26,32 +34,20 @@ $start_time = (Get-Date).AddMinutes(-5) | ConvertTo-UnixTimestamp
 
 $end_time = Get-Date | ConvertTo-UnixTimestamp # Now
 
-
-
-
-#Analytics
-$apiKey = "api-key-from-appdy-analytics"
-
-$accountName = "global_account-name-123456"
-
 $appdy.SetAnalytics($apiKey,$accountName)
 
 $result = $appdy.GetLogin()
 
-#Custom Schema Name
-$index = "customer_name_dr_license_v1"
-
-#$schema = '{ "schema" : { "Application" : "string" , "AppID" : "string" , "NodeID" : "string" , "NodeName" : "string" , "MachineName" : "string" , "Tier" : "string" , "LastInstallTime" : "date" , "LastRestartTime" : "date" , "NodeUsingLicence" : "integer" , "NodeLastKnownTierAppConfig" : "string" , "NodeStatusPercentage" : "float" , "NodeStatusLatest" : "string" , "APMAgentPresent" : "string" , "Historical" : "string" , "Unmanaged" : "string" , "Unregistered" : "string" , "DummyNode" : "string" , "ComponentTypeName" : "string" , "ComponentTypeAgentType" : "string" , "ComponentTypeProductType" : "string" , "MachineOSTypeName" : "string" , "MachineAgentPresent" : "string" , "MachineAgentVersion" : "string" , "AppAgentAgentVersion" : "string" , "AppAgentType" : "string" , "AppAgentLatestAgentRuntime" : "string"} }'
-#$schema = '{ "schema" : { "Application" : "string" , "AppID" : "string" , "NodeID" : "string" , "NodeName" : "string" , "MachineName" : "string" , "Tier" : "string" , "LastInstallTime" : "date" , "LastRestartTime" : "date" , "NodeUsingLicence" : "integer" , "NodeLastKnownTierAppConfig" : "string" , "APMAgentPresent" : "string" , "Historical" : "string" , "ComponentTypeName" : "string" , "ComponentTypeAgentType" : "string" , "ComponentTypeProductType" : "string" , "MachineOSTypeName" : "string" , "MachineAgentPresent" : "string" , "MachineAgentVersion" : "string" , "AppAgentAgentVersion" : "string" , "AppAgentType" : "string" , "AppAgentLatestAgentRuntime" : "string"} }'
 $schema = '{ "schema" : { "ApplicationName" : "string" , "ApplicationId" : "integer" , "nodeId" : "integer" , "nodeName" : "string" , "MachineId" : "integer" , "agentId" : "integer" , "componentId" : "integer" , "componentName" : "string" , "appServerRestartDate" : "date" , "jvmVersion" : "string" , "componentTypeName" : "string" , "productType" : "string" , "App_Status" : "float" , "Machine_Status" : "float" , "AppServer_Agent_Installed" : "string" , "Machine_Agent_Installed" : "string" , "HostName" : "string" , "appAgentVersion" : "string" , "Status" : "string" } }'
-
-#$schema = $schema | ConvertFrom-Json | ConvertTo-Json -Compress
 
 Write-Host "Deleting Schema $index"
 $appdy.DeleteAnalyticsSchema($index)
+
 Start-Sleep -Seconds 8
+
 Write-Host "Creating Schema $index"
 $appdy.CreateAnalyticsSchema($index,$schema)
+
 Write-Host "Getting Apps "
 
 ## APPs totais

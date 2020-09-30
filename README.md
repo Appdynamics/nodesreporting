@@ -6,6 +6,10 @@ Dr License was created by the necessity of getting Application/Node license leve
 
 This Tool now is only running mannually in next releases I will include the appdy "monitor.xml", remove all console logs and add create some custom metrics.
 
+Dr License use thei Wrapper to talk to Appdynamics APIs
+
+["Appdynamics Powershell Core Wrapper"](https://github.com/diegopereiraeng/appdynamics-powershell-core-wrapper)
+
 This Tool will produce these data for each node in all your apps that are reporting in the last 5 minutes:
 ```
 ApplicationName
