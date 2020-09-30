@@ -1,8 +1,8 @@
 # Dr license
 
-Saas and On prem License counter tool - Application/Node Level
+Saas and On prem License Counter Tool - Application/Server Level
 
-Dr License was created by the necessity of getting Application/Node license level controll for the customers.
+Dr License was created by the necessity of getting Application/Server license level controll for the customers.
 
 This Tool now is only running mannually in next releases I will include the appdy "monitor.xml", remove all console logs and add create some custom metrics.
 
