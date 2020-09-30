@@ -8,7 +8,7 @@ This Tool now is only running mannually in next releases I will include the appd
 
 Dr License use the Appdynamics Powershell Wrapper to talk to Appdynamics APIs
 
-["Appdynamics Powershell Core Wrapper"](https://github.com/diegopereiraeng/appdynamics-powershell-core-wrapper)
+[Appdynamics Powershell Core Wrapper](https://github.com/diegopereiraeng/appdynamics-powershell-core-wrapper)
 
 This Tool will produce these data for each node in all your apps that are reporting in the last 5 minutes:
 ```
