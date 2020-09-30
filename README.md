@@ -32,7 +32,7 @@ Status
 
 I will include in the extension in the next releases.
 
-![Sample Dashboard](https://github.com/Appdynamics/drlicense/blob/master/Dashboard-DrLicense.png)
+![Sample Dashboard](https://github.com/Appdynamics/drlicense/blob/master/Dashboard-DrLicense.jpg)
 
 # Important
 
