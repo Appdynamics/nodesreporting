@@ -29,6 +29,22 @@ appAgentVersion
 Status
 ```
 
+# Configuration
+
+Please open the script DrLicense.ps1 and edit the below parameters:
+
+![Main Parameter](https://github.com/Appdynamics/drlicense/blob/master/DrLicense_Parameters.png)
+
+```
+Controller Address
+Authentication
+Analytics API Key
+Controller Global Account Name
+Analytics Schema
+```
+
+
+
 # Dashboard
 
 I will include in the extension in the next releases.
