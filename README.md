@@ -2,7 +2,7 @@
 
 Saas and On prem License Counter Tool - Application/Server Level
 
-Dr License was created by the necessity of getting Application/Server license level controll for the customers.
+The Dr License Tool was created because of the lack of Application/Server license usage visibility in our oficial License panel, so this tool give visibility mainly to our SaaS customers about the license usage by customer Application, Environment (eg. Dev vs Prod), Agents with old versions, App w/ machine agents, etc. This give the opportunity to our customers understand their applications growth and license usage for future expansions.
 
 This Tool now is only running mannually in next releases I will include the appdy "monitor.xml", remove all console logs and add create some custom metrics.
 
