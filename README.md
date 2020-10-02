@@ -35,9 +35,9 @@ Status
 
 # Configuration
 
-Please open the script DrLicense.ps1 and edit the below parameters:
+Please open the script NodesReporting.ps1 and edit the below parameters:
 
-![Main Parameter](https://github.com/Appdynamics/nodesreporting/blob/master/DrLicense_Parameters.png)
+![Main Parameter](https://github.com/Appdynamics/nodesreporting/blob/master/NodesReporting_Parameters.png)
 
 ```
 Controller Address
@@ -53,7 +53,7 @@ Analytics Schema
 
 I will include in the extension in the next releases.
 
-![Sample Dashboard](https://github.com/Appdynamics/nodesreporting/blob/master/Dashboard-DrLicense.jpg)
+![Sample Dashboard](https://github.com/Appdynamics/nodesreporting/blob/master/Dashboard-NodesReporting.jpg)
 
 # Important
 
