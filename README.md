@@ -1,8 +1,8 @@
-# Dr license
+# Nodes Reporting
 
-Saas and On prem License Counter Tool - Application/Server Level
+Saas and On prem Nodes reporting Counter Tool - Application/Server Level
 
-The Dr License Tool was created because of the lack of Application/Server license usage visibility in our oficial License panel, so this tool give visibility mainly to our SaaS customers about the license usage by customer Application, Environment (eg. Dev vs Prod), Agents with old versions, App w/ machine agents, etc. This give the opportunity to our customers understand their applications growth and license usage for future expansions.
+The Nodes Reporting Tool was created because of the lack of Application/Server nodes reporting visibility in our UI, so this tool give visibility mainly to our SaaS customers about the nodes reporting by customer Application, Environment (eg. Dev vs Prod), Agents with old versions, App w/ machine agents, etc. This give the opportunity to our customers understand their applications growth and nodes usage for future expansions.
 
 This Tool now is only running mannually in next releases I will include the appdy "monitor.xml", remove all console logs and add create some custom metrics.
 
@@ -37,7 +37,7 @@ Status
 
 Please open the script DrLicense.ps1 and edit the below parameters:
 
-![Main Parameter](https://github.com/Appdynamics/drlicense/blob/master/DrLicense_Parameters.png)
+![Main Parameter](https://github.com/Appdynamics/nodesreporting/blob/master/DrLicense_Parameters.png)
 
 ```
 Controller Address
@@ -53,7 +53,7 @@ Analytics Schema
 
 I will include in the extension in the next releases.
 
-![Sample Dashboard](https://github.com/Appdynamics/drlicense/blob/master/Dashboard-DrLicense.jpg)
+![Sample Dashboard](https://github.com/Appdynamics/nodesreporting/blob/master/Dashboard-DrLicense.jpg)
 
 # Important
 
